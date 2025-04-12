@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { CgClose } from "react-icons/cg";
-import ToastNotification, { showToast } from "../Toast/ToastNotification";
-import { CiWarning } from "react-icons/ci";
-import { toast } from "sonner";
+import { showToast } from "../Toast/ToastNotification";
+
 import { AnimatePresence, motion } from "framer-motion";
 const AddedProducts = ({ bidProducts, setBidProducts, fadeIN }) => {
   const handleRemoveItems = (id) => {

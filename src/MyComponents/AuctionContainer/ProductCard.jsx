@@ -1,12 +1,7 @@
-import button from "daisyui/components/button";
-import React, { useEffect, useState } from "react";
-import { HiHeart } from "react-icons/hi";
-
+import React from "react";
 import { IoHeartOutline } from "react-icons/io5";
-import ToastNotification, { showToast } from "../Toast/ToastNotification";
-import { toast } from "sonner";
-import { TiTick } from "react-icons/ti";
-import { AiFillHeart } from "react-icons/ai";
+import { showToast } from "../Toast/ToastNotification";
+
 import { AnimatePresence, motion } from "framer-motion";
 import HeartButton from "../HeartButton";
 

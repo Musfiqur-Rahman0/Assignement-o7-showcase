@@ -4,11 +4,7 @@ import Footer from "./MyComponents/Footer";
 import HeroSection from "./MyComponents/HeroSection";
 import Navbar from "./MyComponents/Navbar";
 import ToastNotification from "./MyComponents/Toast/ToastNotification";
-import BasicMoreOptions from "./MyComponents/Toast/ToastNotification";
-import { toast, ToastContainer } from "react-toastify";
 import { ThemeProvider } from "./Theme/ThemeProvider";
-import HeartButton from "./MyComponents/HeartButton";
-import FavoriteList from "./MyComponents/FavoriteItems ";
 
 function App() {
   const [bidProducts, setBidProducts] = useState([]);
@@ -29,7 +25,6 @@ function App() {
 
       <Footer />
       <ToastNotification />
-      <FavoriteList />
     </ThemeProvider>
   );
 }

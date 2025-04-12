@@ -4,8 +4,6 @@ import React from "react";
 import { ComboboxDemo } from "./ComboboxDemo";
 
 const FilteredComponent = ({
-  products,
-  inputValue,
   setInputValue,
   setSelectedFeltering,
   selectedFiltering,
@@ -21,7 +19,12 @@ const FilteredComponent = ({
           placeholder="Search products..."
           onChange={(e) => handleChange(e)}
         />
-        <Button onClick={handleSearchValue}>Search</Button>
+        <Button
+          className="active:scale-90 cursor-pointer"
+          onClick={handleSearchValue}
+        >
+          Search
+        </Button>
       </div>
       <ComboboxDemo
         setSelectedFeltering={setSelectedFeltering}

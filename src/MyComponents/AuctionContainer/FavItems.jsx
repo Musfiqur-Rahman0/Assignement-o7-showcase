@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoHeartOutline } from "react-icons/io5";
 import EmptyFavItems from "./EmptyFavItems";
 import AddedProducts from "./AddedProductCard";

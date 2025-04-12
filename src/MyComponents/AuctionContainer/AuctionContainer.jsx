@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import FavItems from "./FavItems";
-import ProductCard from "./ProductCard";
-import { AnimatePresence, motion } from "framer-motion";
 import Loader from "../Loader";
 import FilteredComponent from "../FilteredComponent";
 import Products from "./Products";
+import { motion } from "framer-motion";
 
 const AuctionContainer = ({ bidProducts, setBidProducts }) => {
   const tableHead = ["Items", "Current Bid", "Time Left", "Bid Now"];
@@ -81,12 +80,18 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
   return (
     <div className="w-full bg-background text-black py-10 ">
       <div className="px-3 md:px-0 md:w-10/12 mx-auto  space-y-1 ">
-        <h2 className="text-foreground text-2xl font-semibold">
-          Active Auction
-        </h2>
-        <p className="text-sm text-foreground">
-          Discover and bid on extraordinary items
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-foreground text-2xl font-semibold">
+            Active Auction
+          </h2>
+          <p className="text-sm text-foreground">
+            Discover and bid on extraordinary items
+          </p>
+        </motion.div>
         <FilteredComponent
           products={products}
           inputValue={inputValue}

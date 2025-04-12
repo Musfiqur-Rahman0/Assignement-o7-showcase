@@ -7,7 +7,8 @@ const EmptyFavItems = ({ fadeIN }) => {
       <motion.div
         variants={fadeIN}
         initial="hidden"
-        animate="show"
+        whileInView="show"
+        transition={{ duration: 0.8, type: "spring" }}
         className="text-foreground text-center py-10 border-y border-gray-200 space-y-2"
       >
         <h4 className="text-2xl font-semibold">No favorite items</h4>

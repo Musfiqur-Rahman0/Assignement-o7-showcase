@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 const Products = ({
@@ -12,7 +12,7 @@ const Products = ({
     <motion.tr
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
       className="space-y-3"
     >
       {sortedProducts.map((product) => (
