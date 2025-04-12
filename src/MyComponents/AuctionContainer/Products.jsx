@@ -7,13 +7,7 @@ const Products = ({
   setBidProducts,
   item,
   container,
-  selectedFiltering,
-  searchQuery,
 }) => {
-  useEffect(() => {
-    console.log("component mounted");
-  }, [selectedFiltering, searchQuery]);
-
   return (
     <motion.tr
       variants={container}

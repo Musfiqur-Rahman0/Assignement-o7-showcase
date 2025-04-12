@@ -8,7 +8,7 @@ const Page = () => {
   const [selectedTab, setSelectedTab] = useState("");
 
   return (
-    <motion.div className="font-poppins flex items-center gap-5">
+    <motion.div className="font-poppins  items-center gap-5 hidden md:flex">
       {pages.map((page, index) => (
         <a
           href="#"

@@ -49,7 +49,7 @@ export function ComboboxDemo({ selectedFiltering, setSelectedFeltering }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between text-foreground"
+          className="w-fit justify-between text-foreground"
         >
           {selectedFiltering
             ? frameworks.find(

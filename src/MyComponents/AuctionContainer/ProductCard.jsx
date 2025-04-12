@@ -22,7 +22,7 @@ const ProductCard = ({ product, setBidProducts, bidProducts, item }) => {
   return (
     <motion.td
       variants={item}
-      className="hover:bg-background text-foreground bg-card rounded-2xl  p-3 grid grid-cols-5 gap-2 text-center"
+      className="hover:bg-background text-foreground bg-card rounded-2xl  p-3 grid grid-cols-4 sm:grid-cols-5 gap-2 text-center"
     >
       <div className="col-span-2 flex items-center gap-2  text-left">
         <div className="h-20 w-20 ">
@@ -32,10 +32,10 @@ const ProductCard = ({ product, setBidProducts, bidProducts, item }) => {
             className="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <p className="">{title}</p>
+        <p className="hidden sm:block">{title}</p>
       </div>
       <p className="text-card-foreground my-auto">${currentBidPrice}</p>
-      <p className="text-card-foreground my-auto">{timeLeft}</p>
+      <p className="text-card-foreground my-auto hidden sm:block">{timeLeft}</p>
 
       <AnimatePresence mode="wait">
         {isExits ? (
@@ -45,7 +45,7 @@ const ProductCard = ({ product, setBidProducts, bidProducts, item }) => {
             onClick={() => {
               showToast("success", "Added", 1500), addToBidProducts(product);
             }}
-            className="mx-auto cursor-pointer active:scale-90"
+            className="mx-auto cursor-pointer active:scale-90 "
           >
             <IoHeartOutline size={25} />
           </button>

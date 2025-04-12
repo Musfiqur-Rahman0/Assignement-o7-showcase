@@ -47,7 +47,7 @@ const FavItems = ({ bidProducts, setBidProducts, fadeIN }) => {
               onClick={() => setBidProducts([])}
               className="cursor-pointer"
             >
-              Clear All
+              Remove All
             </Button>
           </motion.div>
         )}

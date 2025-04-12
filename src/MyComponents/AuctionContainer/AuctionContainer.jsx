@@ -15,9 +15,10 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchValue = () => {
+    console.log("clicked");
     setSearchQuery(inputValue);
   };
-
+  console.log(searchQuery);
   useEffect(() => {
     try {
       setIsLoading(true);
@@ -60,7 +61,9 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
     return newProduct;
   });
 
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
+  console.log(products);
+
+  const sortedProducts = filteredProducts.sort((a, b) => {
     if (selectedFiltering === "A-Z") {
       return a.title.localeCompare(b.title);
     }
@@ -77,7 +80,7 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
 
   return (
     <div className="w-full bg-background text-black py-10 ">
-      <div className="w-10/12 mx-auto  space-y-1 ">
+      <div className="px-3 md:px-0 md:w-10/12 mx-auto  space-y-1 ">
         <h2 className="text-foreground text-2xl font-semibold">
           Active Auction
         </h2>
@@ -101,14 +104,16 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
             ) : (
               <table className="rounded-lg w-full">
                 <thead className="">
-                  <tr className="text-foreground grid grid-cols-5 gap-3 py-3  px-3">
+                  <tr className="text-foreground grid grid-cols-4 sm:grid-cols-5 gap-3 py-3  px-3">
                     {tableHead.map((heading, index) => (
                       <th
                         key={index}
                         className={
                           index === 0
                             ? "col-span-2 text-left"
-                            : "col-auto text-center"
+                            : index === 2
+                            ? "hidden sm:block"
+                            : "block"
                         }
                       >
                         {heading}
@@ -131,7 +136,6 @@ const AuctionContainer = ({ bidProducts, setBidProducts }) => {
                       item={item}
                       container={container}
                       selectedFiltering={selectedFiltering}
-                      searchQuery={searchQuery}
                     />
                   )}
                 </tbody>
